@@ -268,10 +268,7 @@ const counterMaker = () => {
   }
 };
 
-const counter = counterMaker();
-counter(); 
-counter();
-counter();
+
 /**
  * ### Challenge `counterMakerWithLimit`
  * 
@@ -292,9 +289,20 @@ counter();
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
+function counterMakerWithLimit(maxValue) {
+  let count = 0;
+  function counter() {
+    if(count <= maxValue){
+    return count++;
+    } else {
+      count = 0;
+      return count++;
+    }
+  }
+  return counter;
 }
+
+
 
 /////////////// END OF CHALLENGE ///////////////
 /////////////// END OF CHALLENGE ///////////////
