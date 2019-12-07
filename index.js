@@ -157,9 +157,20 @@ function processContains(item, list, callback) {
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
-  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
-}
+function processDuplicateFree(list, callback) {
+  //let set = new Set(list);
+  return callback([...new Set(list)]);
+};
+// let array1 = Array('a', 'b', 'c', 'd', 'e', 'f')
+// let array2 = Array('c', 'e', 'g')
+// let concat = array1.concat(array2) // join arrays => [ 'a', 'b', 'c', 'd', 'e', 'f', 'c', 'e', 'g' ]
+
+// // Set will filter out duplicates automatically
+// let set = new Set(concat) // => Set { 'a', 'b', 'c', 'd', 'e', 'f', 'g' }
+
+// // Use spread operator to extend Set to an Array
+// let result = [...set]
+// console.log(result) // =>  [ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
